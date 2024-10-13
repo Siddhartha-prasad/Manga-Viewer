@@ -1,0 +1,61 @@
+.book-list, .chapter-list, .manga-viewer {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.manga-viewer img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+button {
+  margin: 0 10px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #e0e0e0; /* Default button background */
+  border: 1px solid #ccc; /* Button border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Highlight style for the selected button */
+button.selected {
+  background-color: #007bff; /* Highlighted color */
+  color: white; /* Text color when highlighted */
+  border-color: #0056b3; /* Darker border when selected */
+}
+
+.pages {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.left-click, .right-click {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  top: 0%;
+}
+
+.left-click {
+  left: 0%;
+}
+
+.right-click {
+  right: 0%;
+}
+
+.chapter-img {
+  height: 100vh;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .chapter-img {
+    height: 60vh;
+  }
+}
